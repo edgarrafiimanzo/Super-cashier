@@ -1,65 +1,39 @@
-# Super-cashier
-Submission for Pacmann's Python module
+# Transaction Class
+A Python class for storing transactions and performing operations on them.
 
+## Class Methods
 
-Transaction Class
-A Python class to store transactions and calculate the total cost of items.
+### `__init__(self)`
+This method initializes an empty list to store transactions.
 
-Table of Contents
-Methods
-__init__
-add_item
-update_item_name
-update_item_price
-update_item_quantity
-delete_transaction
-delete_item
-check_order
-total_cost
-Methods
-__init__
-Initialize the class with an empty list to store items.
+### `add_item(self, name, price, quantity)`
+This method takes in three parameters: `name`, `price`, and `quantity`, and adds a new transaction to the list with these values.
 
-add_item
-Add an item to the transaction.
+### `update_item_name(self, old_name, new_name)`
+This method takes in two parameters: `old_name` and `new_name`, and updates the `name` of a transaction with `old_name` to `new_name`.
 
-Arguments:
-name: The name of the item.
-price: The price of the item.
-quantity: The quantity of the item.
-update_item_name
-Update the name of an item in the transaction.
+### `update_item_price(self, name, new_price)`
+This method takes in two parameters: `name` and `new_price`, and updates the `price` of a transaction with `name` to `new_price`.
 
-Arguments:
-index: The index of the item in the transaction.
-name: The new name for the item.
-update_item_price
-Update the price of an item in the transaction.
+### `update_item_quantity(self, name, new_quantity)`
+This method takes in two parameters: `name` and `new_quantity`, and updates the `quantity` of a transaction with `name` to `new_quantity`.
 
-Arguments:
-index: The index of the item in the transaction.
-price: The new price for the item.
-update_item_quantity
-Update the quantity of an item in the transaction.
+### `delete_transaction(self, name)`
+This method takes in one parameter: `name`, and deletes the transaction with `name` from the list of transactions.
 
-Arguments:
-index: The index of the item in the transaction.
-quantity: The new quantity for the item.
-delete_transaction
-Delete all items in the transaction.
+### `delete_item(self, name)`
+This method takes in one parameter: `name`, and deletes the item with `name` from the list of transactions.
 
-delete_item
-Delete a specific item from the transaction.
+### `check_order(self)`
+This method checks if the user inputs are correct (e.g. correct variable type, non-blank value).
 
-Arguments:
-name: The name of the item to be deleted.
-check_order
-Check if the input is valid.
+### `total_price(self)`
+This method displays a table with the `name`, `price`, `quantity`, and `total cost` of each transaction. The method also applies discounts to the total cost based on the following conditions:
 
-Arguments:
-*args: One or more values to be checked.
-total_cost
-Calculate the total cost of all items in the transaction.
+- If the total cost is greater than `200000` but less than or equal to `300000`, the total cost is discounted by `5%`.
+- If the total cost is greater than `300000` but less than or equal to `500000`, the total cost is discounted by `8%`.
+- If the total cost is greater than `500000`, the total cost is discounted by `10%`.
 
-Returns:
-The total cost of all items in the transaction.
+## Example
+Here's an example of how to use the Transaction class:
+
