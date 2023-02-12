@@ -1,5 +1,5 @@
-# Transaction Class
-A Python class for storing transactions and performing operations on them.
+# Super Cashier app
+A Cashier app which uses a Python class Transaction() for storing transactions and performing operations on them.
 
 ## Class Methods
 
